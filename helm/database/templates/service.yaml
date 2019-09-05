@@ -6,7 +6,6 @@ metadata:
 {{ include "database.labels" . | indent 4 }}
 spec:
   type: {{ .Values.service.type }}
-  type: NodePort
   ports:
     - port: {{ .Values.service.port }}
       NodePort: 33306

@@ -6,11 +6,12 @@ metadata:
 {{ include "database.labels" . | indent 4 }}
 spec:
   type: {{ .Values.service.type }}
+  type: NodePort
   ports:
     - port: {{ .Values.service.port }}
-      targetPort: http
+      NodePort: 33306
+      targetPort: 3306
       protocol: TCP
-      name: http
   selector:
     app.kubernetes.io/name: {{ include "database.name" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}

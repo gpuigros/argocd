@@ -19,7 +19,10 @@ service:
   type: NodePort
   port: 3306
   targetPort: 3306
-
+serviceTim:
+  type: ClusterIP
+  port: 3306
+  targetPort: 3306
 
 ingress:
   enabled: false

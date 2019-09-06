@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: tim-database
+  labels:
+{{ include "database.labels" . | indent 4 }}
+spec:
+  type: {{ .Values.serviceTim.type }}
+  ports:
+    - port: {{ .Values.serviceTim.port }}
+      targetPort: 3306
+      protocol: TCP
+  selector:
+    app.kubernetes.io/name: {{ include "database.name" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}

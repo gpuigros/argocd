@@ -12,7 +12,7 @@ data:
                         jdbcUrl: jdbc:mariadb://localhost:3306/tim
                         maxLifetime: 1200000
                         maximumPoolSize: 10
-                        minimumIdle: 1
+                        minimumIdle: 2
                         password: password
                         poolName: MariaHikari
                         username: flexways

@@ -27,7 +27,6 @@ spec:
           volumeMounts:
             - name: config-volume
               mountPath: /app
-              subPath: application.yaml
           env:
             - name: SPRING_PROFILES_ACTIVE
               value: "e2e"

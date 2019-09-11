@@ -4,7 +4,7 @@ metadata:
   name: tim-configuration
   namespace: {{ .Values.namespace }}
 data:
-  config.yaml: |
+  application.yaml: |
                 app:
                     version: ${version}
                 datasources:
